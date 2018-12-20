@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link href="/media/style.css" type="text/css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Strona główna.</title>
+</head>
+<body>
+    <div id="nagłówek">
+        <p>Sprawdź pogodę!</p>
+    </div>
+    <div id="form">
+        <form action="{% url 'pogoda:index' %}" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+        <button name="submit">Dodaj miasto</button>
+        </form>
+    </div>
+    <div id="pogoda">
+        {% for city_weather in weather_data %}
+        <div id="element">
+         <img id="zdjecie" src="http://openweathermap.org/img/w/{{ city_weather.ikona }}.png" alt="Ikona">
+          <h2>{{ city_weather.miasto }}</h2>
+          <p>{{ city_weather.temperatura }} °C</p>
+          <p>{{ city_weather.opis }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <footer>
+        <p>Stworzył Szymon Lichota</p>
+    </footer>
+</body>
+</html>

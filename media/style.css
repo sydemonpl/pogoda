@@ -1,0 +1,47 @@
+#nagłówek {
+  height: 200px;
+  background-color: #ffdfba;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#nagłówek p{
+  position: absolute;
+  top: 30%;
+  font-weight: bold;
+  font-size: 150%;
+
+}
+#element {
+  background-color: white;
+  border-style: solid;
+  margin: 10px 800px;
+  margin-left: auto;
+  margin-right: auto;
+  float:left
+  min-width: 500px;
+  width: 300px;
+  text-align: center;
+
+}
+#zdjecie {
+  float: right;
+}
+#element h2 {
+  position:relative;
+  left: 0.5cm;
+}
+#form {
+  text-align: center;
+}
+footer {
+  position:relative;
+  height: 100px;
+  top: 4.2cm;
+  background-color: #ffdfba;
+}
+
+body {
+ background-color: #dfe3ee;
+}
